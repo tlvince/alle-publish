@@ -117,4 +117,7 @@ const promises = [
 
 Promise.all(promises)
   .then(readAndUpdate)
-  .catch(err => console.error(err))
+  .catch(err => {
+    console.error(err)
+    process.exit(1)
+  })
